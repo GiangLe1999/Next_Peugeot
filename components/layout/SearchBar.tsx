@@ -11,7 +11,7 @@ const SearchBar: FC<Props> = ({ showSearch }): JSX.Element => {
         transform: showSearch ? "scale(1)" : "scale(0)",
         transformOrigin: "390px -10px",
       }}
-      className="bg-white w-[400px] shadow-md absolute right-1 -bottom-16 rounded-md flex items-center pr-[1px] transition"
+      className="bg-white w-[400px] shadow-md absolute right-1 -bottom-16 rounded-md flex items-center pr-[1px] transition z-50"
     >
       <input
         type="text"

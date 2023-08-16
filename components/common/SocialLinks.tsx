@@ -10,25 +10,25 @@ const SocialLinks: FC<Props> = (props): JSX.Element => {
     <div className="flex gap-x-3">
       <div className="socialIcon hover:bg-[#3A589C]">
         <a href="" target="_blank">
-          <BiLogoFacebook />
+          <BiLogoFacebook size={20} />
         </a>
       </div>
 
       <div className="socialIcon hover:bg-[#962e92]">
         <a href="" target="_blank">
-          <MdEmail size={14} />
+          <MdEmail size={20} />
         </a>
       </div>
 
       <div className="socialIcon hover:bg-[#51cb5a]">
         <a href="" target="_blank">
-          <FaPhoneAlt size={12} />
+          <FaPhoneAlt size={18} />
         </a>
       </div>
 
       <div className="socialIcon hover:bg-[#c33223]">
         <a href="" target="_blank">
-          <BiLogoYoutube />
+          <BiLogoYoutube size={22} />
         </a>
       </div>
     </div>

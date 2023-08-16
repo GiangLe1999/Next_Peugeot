@@ -18,7 +18,7 @@ const HeaderItems: FC<Props> = (props): JSX.Element => {
         <li key={index} className="hover:text-white group">
           <Link
             href={`/${item.link}`}
-            className="text-[#fffc] text-[12.8px] font-bold inline-block py-7 px-2 group-hover:text-white transition"
+            className="text-[#fffc] text-sm font-bold inline-block py-7 px-2 group-hover:text-white transition"
           >
             {item.title}
           </Link>
