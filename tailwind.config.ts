@@ -12,6 +12,9 @@ const config: Config = {
         primary: "#000000",
         secondary: "#002e80",
       },
+      aspectRatio: {
+        "6/4": "6 / 4",
+      },
     },
   },
   plugins: [],

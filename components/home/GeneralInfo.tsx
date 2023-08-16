@@ -6,7 +6,7 @@ interface Props {}
 const GeneralInfo: FC<Props> = (props): JSX.Element => {
   return (
     <div className="bg-primary">
-      <div className="container pt-5 pb-11 text-white grid grid-cols-3 gap-x-20">
+      <div className="container pt-8 pb-16 text-white grid grid-cols-3 gap-x-20">
         <div className="max-w-[350px] font-bold leading-7">
           Peugeot Văn Giàu: Cập nhật thông tin bảng giá, chương trình ưu đãi,
           bài đánh giá và cảm nhận khách hàng về xe ô tô Peugeot.

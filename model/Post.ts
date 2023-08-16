@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
-const CarSchema = new mongoose.Schema(
+const PostSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
       required: true,
       trim: true,
     },
 
-    price: {
-      type: Number,
+    description: {
+      type: String,
       required: true,
     },
 
@@ -20,19 +20,18 @@ const CarSchema = new mongoose.Schema(
       unique: true,
     },
 
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
+    body: {
+      type: String,
       required: true,
-      ref: "category",
     },
 
-    images: {
-      type: [String],
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
     },
   },
   { timestamps: true }
 );
 
-const Car = mongoose.models?.Car || mongoose.model("Car", CarSchema);
+const Post = mongoose.models?.Post || mongoose.model("Post", PostSchema);
 
-export default Car;
+export default Post;
