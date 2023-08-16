@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { getAllCatesData } from "@/lib/fetchData";
 import CategorySection from "./CategorySection";
 import { CategoryType } from "@/types";
 
-interface Props {}
+interface Props {
+  categories: CategoryType[];
+}
 
-const CarList: FC<Props> = async (props) => {
-  const categories = (await getAllCatesData()) as CategoryType[];
+const Categories: FC<Props> = async ({ categories }) => {
   return (
     <div className="container pt-8">
       {categories.map((category) => {
@@ -21,4 +21,4 @@ const CarList: FC<Props> = async (props) => {
   );
 };
 
-export default CarList;
+export default Categories;
