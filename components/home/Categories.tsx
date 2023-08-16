@@ -1,5 +1,4 @@
 import { FC } from "react";
-import SectionTitle from "./SectionTitle";
 import { getAllCatesData } from "@/lib/fetchData";
 import CategorySection from "./CategorySection";
 import { CategoryType } from "@/types";
