@@ -1,5 +1,5 @@
 export async function getAllCatesData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/category`);
+  const res = await fetch(`${process.env.API_URL}/api/category`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
