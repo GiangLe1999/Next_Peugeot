@@ -1,5 +1,5 @@
 export async function getAllCatesData() {
-  const res = await fetch(`${process.env.API_URL}/api/category`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/category`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -9,7 +9,7 @@ export async function getAllCatesData() {
 }
 
 async function getCarsByCate() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/category/`);
+  const res = await fetch(`/api/category/`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
