@@ -13,7 +13,7 @@ const CarCard: FC<Props> = ({ car, index }): JSX.Element => {
   return (
     <Link
       href={"/sanpham/" + car.slug}
-      className="shadow-md rounded-lg border border-[#eee] p-4"
+      className="shadow-md rounded-lg border border-[#eee] p-4 hover:scale-[1.01] hover:shadow-lg transition"
     >
       <div className="relative w-full aspect-6/4">
         <NextImage src={car.images[index]} alt={car.name} />
