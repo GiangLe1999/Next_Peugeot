@@ -1,12 +1,22 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useEffect, useState } from "react";
 import CategorySection from "./CategorySection";
 import { CategoryType } from "@/types";
 
 interface Props {
-  categories: CategoryType[];
+  // categories: CategoryType[];
 }
 
-const Categories: FC<Props> = async ({ categories }) => {
+const Categories: FC<Props> = () => {
+  const [categories, setCategories] = useState<CategoryType[]>([]);
+
+  useEffect(() => {
+    fetch(`/api/category`)
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
   return (
     <div className="container pt-8">
       {categories.map((category) => {

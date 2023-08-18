@@ -7,12 +7,12 @@ import { getAllCatesData } from "@/lib/fetchData";
 import { CategoryType } from "@/types";
 
 export default async function Home() {
-  const categories = (await getAllCatesData()) as CategoryType[];
+  // const categories = (await getAllCatesData()) as CategoryType[];
   return (
     <main>
       <HomeSwiper />
       <GeneralInfo />
-      <Categories categories={categories} />
+      <Categories />
       <Motorcyle />
       <News />
     </main>
