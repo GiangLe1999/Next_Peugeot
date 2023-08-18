@@ -26,6 +26,8 @@ const CarSchema = new mongoose.Schema(
       ref: "category",
     },
 
+    children: [{ type: { name: String, price: Number } }],
+
     images: {
       type: [String],
     },

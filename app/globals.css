@@ -57,3 +57,33 @@
 .mainSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-white border-none;
 }
+
+.carousel .thumb {
+  @apply !w-28;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  @apply !border !border-[#ccc];
+}
+
+.carousel .control-dots .dot {
+  @apply !w-[10px] !h-[10px] border-[2px] border-[#7a7e7a] opacity-60 bg-transparent !shadow-none !mx-1;
+}
+
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+  @apply !bg-[#334862] !border-none;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #334862 !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #334862 !important;
+}

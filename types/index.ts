@@ -6,6 +6,7 @@ export interface CarType {
   price: number;
   slug: string;
   category: Types.ObjectId;
+  children: [{ name: string; price: number }];
   images: [string];
 }
 

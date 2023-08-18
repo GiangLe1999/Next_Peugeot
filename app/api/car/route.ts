@@ -8,7 +8,10 @@ export async function GET(req: Request) {
   const slug = searchParams.get("slug");
 
   await dbConnect();
-  const car = await Car.findOne({ slug });
+  const car = await Car.findOne({ slug }).populate({
+    path: "category",
+    model: Category,
+  });
 
   return NextResponse.json(car);
 }

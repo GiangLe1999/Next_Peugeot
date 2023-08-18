@@ -5,10 +5,12 @@ import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
   await dbConnect();
-  const categories = await Category.find().populate({
-    path: "cars",
-    model: Car,
-  });
+  const categories = await Category.find()
+    .populate({
+      path: "cars",
+      model: Car,
+    })
+    .sort({ createdAt: 1 });
 
   return NextResponse.json(categories);
 }
