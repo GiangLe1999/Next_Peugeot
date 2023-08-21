@@ -4,7 +4,7 @@ interface Props {}
 
 const FooterForm: FC<Props> = (props): JSX.Element => {
   return (
-    <form className="flex-1">
+    <form className="flex-1" id="baogia">
       <h4 className="text-center text-3xl font-black py-4 text-[#1565c0]">
         NHẬN BÁO GIÁ & ĐĂNG KÝ LÁI THỬ
       </h4>

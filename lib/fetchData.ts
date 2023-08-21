@@ -29,3 +29,19 @@ export const getCarData = async (carSlug: string) => {
     console.log(error);
   }
 };
+
+export const getCarPostData = async (slug: string) => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${slug}`
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};

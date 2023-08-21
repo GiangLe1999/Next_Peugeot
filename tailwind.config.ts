@@ -14,9 +14,17 @@ const config: Config = {
       },
       aspectRatio: {
         "6/4": "6 / 4",
+        "5/2": "5 / 2",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "125ch",
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

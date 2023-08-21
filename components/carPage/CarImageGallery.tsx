@@ -18,7 +18,7 @@ const CarImageGallery: FC<Props> = ({ images }): JSX.Element => {
         // autoPlay
         renderThumbs={() =>
           images.map((img, index) => (
-            <div key={index} className="w-24 aspect-video relative">
+            <div key={index} className="w-full aspect-video relative">
               <NextImage src={img} alt="" />
             </div>
           ))
@@ -34,7 +34,7 @@ const CarImageGallery: FC<Props> = ({ images }): JSX.Element => {
               src={image}
               alt={`${image} preview`}
               priority={index === 0}
-            ></NextImage>
+            />
           </div>
         ))}
       </Carousel>

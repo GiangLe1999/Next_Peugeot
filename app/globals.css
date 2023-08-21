@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 .container {
   @apply max-w-7xl px-4 mx-auto;
 }
@@ -26,6 +30,11 @@
   @apply w-10 h-10 rounded-full border-[3px] border-[#ffffff80] grid place-items-center transition hover:border-none cursor-pointer;
 }
 
+.lightSocialIcon {
+  @apply text-white border-none hover:scale-105;
+}
+
+/* Swiper */
 .swiper {
   @apply cursor-pointer;
 }
@@ -58,6 +67,11 @@
   @apply bg-white border-none;
 }
 
+/* Carousel */
+.carousel .slider-wrapper {
+  @apply !border !border-[#ccc];
+}
+
 .carousel .thumb {
   @apply !w-28;
 }
@@ -86,4 +100,52 @@
 
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid #334862 !important;
+}
+
+.carousel .thumbs-wrapper {
+  @apply !mx-0;
+}
+
+.carousel-status {
+  @apply !text-primary;
+  text-shadow: none !important;
+}
+
+/* Tab Panel */
+.react-tabs__tab-list,
+.react-tabs__tab {
+  @apply !border-b-[3px] !border-[#000000e6];
+}
+
+.react-tabs__tab {
+  @apply !border-none !font-bold !text-[#666666d9] !py-3 !px-5;
+}
+
+.react-tabs__tab.react-tabs__tab--selected {
+  @apply !bg-primary !text-white border-[#000000e6];
+}
+
+.react-tabs__tab.react-tabs__tab--selected::after {
+  @apply !hidden;
+}
+
+/* Post Content */
+.postContent h2 {
+  @apply text-[26px] mb-3 font-bold;
+}
+
+.postContent h2:not(:first-child) {
+  @apply mt-[52px];
+}
+
+.postContent img {
+  @apply rounded-md absolute object-cover m-0;
+}
+
+.tableContent table td {
+  @apply py-2;
+}
+
+.tableContent table tr {
+  @apply border-b border-[#ececec];
 }
