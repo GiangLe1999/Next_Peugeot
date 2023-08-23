@@ -8,7 +8,7 @@ const commonClass = "flex items-center gap-x-1";
 
 const LoanPolicy: FC<Props> = (props): JSX.Element => {
   return (
-    <div className="border border-primary mb-6 p-4 font-bold rounded-md">
+    <div className="border border-primary my-6 p-4 font-bold rounded-md">
       <p className="pb-4 border-b border-[#ccc]">
         Hỗ trợ mua xe Peugeot trả góp lên đến 8 năm - Lãi suất thấp - Thủ tục
         đơn giản, nhanh chóng.
