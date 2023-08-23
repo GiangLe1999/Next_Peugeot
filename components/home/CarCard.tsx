@@ -34,13 +34,13 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
         </div>
 
         <div className="grid grid-cols-2 gap-6 items-center w-[70%] m-auto">
-          <a href="tel:0962334807" className={buttonClasses}>
-            <BsFillTelephoneFill /> Bấm gọi ngay
-          </a>
-
           <Link href={"/sanpham/" + car.slug} className={buttonClasses}>
             <FaMagnifyingGlassChart /> Xem thông số
           </Link>
+
+          <a href="tel:0962334807" className={buttonClasses}>
+            <BsFillTelephoneFill /> Bấm gọi ngay
+          </a>
         </div>
       </div>
     </div>
