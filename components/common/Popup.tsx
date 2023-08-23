@@ -1,10 +1,11 @@
 "use client";
 
-import { FC, FormEvent, useState } from "react";
+import { FC } from "react";
 import NextImage from "./NextImage";
 import { IoClose } from "react-icons/io5";
 import { BiLoaderCircle } from "react-icons/bi";
 import ResultPopup from "./ResultPopup";
+import { useForm } from "@/hook/useForm";
 
 interface Props {
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,51 +14,19 @@ interface Props {
 const inputClasses = "rounded-md border border-[#ccc] py-2 px-4";
 
 const Popup: FC<Props> = ({ setShowPopup }): JSX.Element => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [carType, setCarType] = useState("2008");
-  const [loading, setLoading] = useState(false);
-  const [showResult, setShowResult] = useState(false);
-  const [status, setStatus] = useState("");
-
-  const closeModalHandler = () => {
-    setShowPopup(false);
-    setShowResult(false);
-    setStatus("");
-    setLoading(false);
-  };
-
-  const submitFormHandler = async (e: FormEvent) => {
-    try {
-      e.preventDefault();
-      setLoading(true);
-      const data = JSON.stringify({ name, phone, carType });
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/customer`,
-        {
-          method: "POST",
-          body: data,
-        }
-      );
-      setLoading(false);
-      setShowPopup(false);
-
-      if (res.status === 201) {
-        setShowPopup(true);
-        setShowResult(true);
-        setStatus("success");
-      } else {
-        throw new Error();
-      }
-    } catch (error) {
-      setLoading(false);
-      setShowPopup(true);
-      setShowResult(true);
-      setStatus("error");
-    }
-  };
-
-  console.log(status, showResult);
+  const {
+    name,
+    setName,
+    phone,
+    setPhone,
+    carType,
+    setCarType,
+    loading,
+    showResult,
+    status,
+    closeModalHandler,
+    formSubmitHandler,
+  } = useForm(setShowPopup);
 
   return (
     <div
@@ -68,7 +37,7 @@ const Popup: FC<Props> = ({ setShowPopup }): JSX.Element => {
         <form
           className="w-1/2 m-auto bg-white absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-md"
           onClick={(e) => e.stopPropagation()}
-          onSubmit={submitFormHandler}
+          onSubmit={formSubmitHandler}
         >
           <button
             onClick={closeModalHandler}

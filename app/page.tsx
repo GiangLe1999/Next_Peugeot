@@ -1,18 +1,18 @@
-import Categories from "@/components/home/Categories";
+import Cars from "@/components/home/Cars";
 import GeneralInfo from "@/components/home/GeneralInfo";
 import HomeSwiper from "@/components/home/HomeSwiper";
 import Motorcyle from "@/components/home/Motorcyle";
 import News from "@/components/home/News";
-import { getAllCatesData } from "@/lib/fetchData";
-import { CategoryType } from "@/types";
+import { getAllCarsData } from "@/lib/fetchData";
+import { CarType } from "@/types";
 
 export default async function Home() {
-  // const categories = (await getAllCatesData()) as CategoryType[];
+  const cars = (await getAllCarsData()) as CarType[];
   return (
     <main className="relative">
       <HomeSwiper />
       <GeneralInfo />
-      <Categories />
+      <Cars cars={cars} />
       <Motorcyle />
       <News />
     </main>
