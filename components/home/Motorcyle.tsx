@@ -38,7 +38,7 @@ const Motorcyle: FC<Props> = (props): JSX.Element => {
           <div className="px-4 flex justify-center mt-3">
             <Link
               className="bg-secondary text-white w-fit pl-4 pr-2 py-2 text-xs font-bold flex items-center gap-x-1"
-              href="/sanpham/peugeot-django-125-abs"
+              href="/sanpham/peugeot-django"
             >
               Tìm hiểu thêm <BiChevronRight size={17} />
             </Link>

@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NextImage from "../common/NextImage";
+import ContainNextImage from "../common/ContainNextImage";
 
 interface Props {
   images: string[];
@@ -19,7 +20,7 @@ const CarImageGallery: FC<Props> = ({ images }): JSX.Element => {
         renderThumbs={() =>
           images.map((img, index) => (
             <div key={index} className="w-full aspect-video relative">
-              <NextImage src={img} alt="" />
+              <ContainNextImage src={img} alt="" />
             </div>
           ))
         }
@@ -27,9 +28,9 @@ const CarImageGallery: FC<Props> = ({ images }): JSX.Element => {
         {images.map((image, index) => (
           <div
             key={image}
-            className="relative w-full aspect-6/4 cursor-pointer"
+            className="relative w-full aspect-8/5 cursor-pointer"
           >
-            <NextImage
+            <ContainNextImage
               key={image}
               src={image}
               alt={`${image} preview`}

@@ -13,6 +13,7 @@ const config: Config = {
         secondary: "#002e80",
       },
       aspectRatio: {
+        "8/5": "8 / 5",
         "6/4": "6 / 4",
         "5/2": "5 / 2",
       },
