@@ -3,7 +3,6 @@
 import React, { FC } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import NextImage from "../common/NextImage";
 import ContainNextImage from "../common/ContainNextImage";
 
 interface Props {
