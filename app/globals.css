@@ -149,3 +149,7 @@ html {
 .tableContent table tr {
   @apply border-b border-[#ececec];
 }
+
+.blur-beneath {
+  backdrop-filter: blur(10px);
+}

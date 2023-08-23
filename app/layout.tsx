@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import { Chakra_Petch } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import ContactBtns from "@/components/layout/ContactBtns";
 
 const chakra = Chakra_Petch({
   subsets: ["vietnamese"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ContactBtns />
       </body>
     </html>
   );

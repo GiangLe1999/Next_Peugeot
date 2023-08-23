@@ -9,7 +9,7 @@ interface Props {}
 const Footer: FC<Props> = (props): JSX.Element => {
   return (
     <footer className="bg-primary">
-      <div className="container flex gap-x-10 pt-6 py-10">
+      <div className="container flex gap-x-10 pt-14 pb-5">
         <div className="relative w-1/2 aspect-video">
           <NextImage
             src="/layout/peugeot-footer.jpg"

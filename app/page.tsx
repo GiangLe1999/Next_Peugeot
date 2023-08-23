@@ -9,7 +9,7 @@ import { CategoryType } from "@/types";
 export default async function Home() {
   // const categories = (await getAllCatesData()) as CategoryType[];
   return (
-    <main>
+    <main className="relative">
       <HomeSwiper />
       <GeneralInfo />
       <Categories />

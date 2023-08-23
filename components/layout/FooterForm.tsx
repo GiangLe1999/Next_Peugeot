@@ -16,15 +16,15 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
         </label>
         <select id="loaixe" className="formInput">
           <option value="">--- Chọn loại xe ----</option>
-          <option value="5008">NEW PEUGEOT 5008</option>
-          <option value="3008">NEW PEUGEOT 3008</option>
           <option value="2008">PEUGEOT 2008</option>
-          <option value="Traveller">PEUGEOT TRAVELLER</option>
+          <option value="3008">PEUGEOT 3008</option>
+          <option value="5008">PEUGEOT 5008</option>
+          <option value="traveller">PEUGEOT TRAVELLER</option>
         </select>
       </div>
 
       {/* Hình thức */}
-      <div className="formInputWrapper">
+      {/* <div className="formInputWrapper">
         <label className="formLabel" htmlFor="hinhthuc1">
           Hình thức thanh toán
         </label>
@@ -44,7 +44,7 @@ const FooterForm: FC<Props> = (props): JSX.Element => {
             </label>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Họ tên */}
       <div className="formInputWrapper">
