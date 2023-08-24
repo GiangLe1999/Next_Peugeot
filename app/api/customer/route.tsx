@@ -2,9 +2,8 @@ import { isAdmin } from "@/lib/adminAuth";
 import dbConnect from "@/lib/db";
 import Customer from "@/model/Customer";
 import { NextResponse } from "next/server";
-import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request) {
   const admin = await isAdmin();
 
   if (!admin)
