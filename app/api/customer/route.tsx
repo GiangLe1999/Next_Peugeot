@@ -1,6 +1,25 @@
+import { isAdmin } from "@/lib/adminAuth";
 import dbConnect from "@/lib/db";
 import Customer from "@/model/Customer";
 import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
+
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  const admin = await isAdmin();
+
+  if (!admin)
+    return NextResponse.json(
+      { error: "Unauthorized!" },
+      {
+        status: 401,
+      }
+    );
+
+  await dbConnect();
+  const customers = await Customer.find();
+
+  return NextResponse.json(customers);
+}
 
 export async function POST(req: Request) {
   const { name, carType, phone } = await req.json();

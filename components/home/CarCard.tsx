@@ -38,7 +38,7 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
             <FaMagnifyingGlassChart /> Xem thông số
           </Link>
 
-          <a href="tel:0962334807" className={buttonClasses}>
+          <a href="tel:0377750199" className={buttonClasses}>
             <BsFillTelephoneFill /> Bấm gọi ngay
           </a>
         </div>

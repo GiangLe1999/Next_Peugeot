@@ -15,7 +15,10 @@ const SocialLinks: FC<Props> = ({ light }): JSX.Element => {
           light && "bg-[#3A589C] lightSocialIcon"
         }`}
       >
-        <a href="" target="_blank">
+        <a
+          href="https://www.facebook.com/Peugeotkhanhhoa1?mibextid=ZbWKwL"
+          target="_blank"
+        >
           <BiLogoFacebook size={20} />
         </a>
       </div>
@@ -25,7 +28,7 @@ const SocialLinks: FC<Props> = ({ light }): JSX.Element => {
           light && "bg-[#962e92] lightSocialIcon"
         }`}
       >
-        <a href="" target="_blank">
+        <a href="mailto:phamgiau190@gmail.com">
           <MdEmail size={20} />
         </a>
       </div>
@@ -35,7 +38,7 @@ const SocialLinks: FC<Props> = ({ light }): JSX.Element => {
           light && "bg-[#51cb5a] lightSocialIcon"
         }`}
       >
-        <a href="" target="_blank">
+        <a href="tel:0377750199">
           <FaPhoneAlt size={18} />
         </a>
       </div>

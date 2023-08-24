@@ -30,9 +30,9 @@ const Footer: FC<Props> = (props): JSX.Element => {
 
         <div className="w-[27%]">
           <h4 className="footerTitle">Hỗ trợ khách hàng</h4>
-          <p>Hotline: 0975.047.068</p>
+          <p>Hotline: 0377.750.199</p>
           <p>Email:</p>
-          <p>peugeotsaigon.com.vn@gmail.com</p>
+          <p>phamgiau190@gmail.com</p>
         </div>
 
         <div className="w-[27%]">
@@ -44,7 +44,7 @@ const Footer: FC<Props> = (props): JSX.Element => {
             <Link href="">CHÍNH SÁCH BẢO MẬT</Link>
           </li>
           <li className="mb-4">
-            <Link href="">LIÊN HỆ</Link>
+            <Link href="/lien-he">LIÊN HỆ</Link>
           </li>
           <SocialLinks />
         </div>

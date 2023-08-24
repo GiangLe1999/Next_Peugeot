@@ -7,20 +7,40 @@ import { ImSearch } from "react-icons/im";
 import SearchBar from "./SearchBar";
 import useDropdown from "@/hook/useDropdown";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
+
+const navItemClasses =
+  "text-[#fffc] text-sm font-bold inline-block py-3 px-2 group-hover:text-white transition border-[2px] border-transparent rounded-md";
 
 interface Props {}
 
 const HeaderItems: FC<Props> = (props): JSX.Element => {
-  const pathname = usePathname();
+  const { data: session } = useSession() as any;
+  const role = session?.user?.role;
+  const pathname = usePathname() || "";
   const { show, setShow, innerRef } = useDropdown();
 
   return (
     <ul className="text-white flex items-center gap-2">
+      {role === "admin" && (
+        <li className="hover:text-white group">
+          <Link
+            href={`/admin`}
+            className={`${navItemClasses} ${
+              pathname && pathname?.includes("/admin")
+                ? "text-white border-white"
+                : ""
+            } `}
+          >
+            ADMIN
+          </Link>
+        </li>
+      )}
       {headerItems.map((item, index) => (
         <li key={index} className="hover:text-white group">
           <Link
             href={`/${item.link}`}
-            className={`text-[#fffc] text-sm font-bold inline-block py-3 px-2 group-hover:text-white transition border-[2px] border-transparent rounded-md ${
+            className={`${navItemClasses} ${
               pathname.includes(item.link) && "text-white border-white"
             } `}
           >

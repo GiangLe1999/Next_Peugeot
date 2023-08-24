@@ -88,7 +88,7 @@ const Popup: FC<Props> = ({ setShowPopup }): JSX.Element => {
               <label>Số điện thoại</label>
               <input
                 type="number"
-                placeholder="0962334807"
+                placeholder="0377750199"
                 className={inputClasses}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}

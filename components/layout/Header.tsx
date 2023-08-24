@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Logo from "../common/Logo";
 import HeaderItems from "./HeaderItems";
+import { NextAuthProvider } from "@/lib/authProviders";
 
 interface Props {}
 
@@ -10,7 +11,9 @@ const Header: FC<Props> = (props): JSX.Element => {
       <nav className="container flex justify-between">
         <Logo />
 
-        <HeaderItems />
+        <NextAuthProvider>
+          <HeaderItems />
+        </NextAuthProvider>
       </nav>
     </header>
   );
