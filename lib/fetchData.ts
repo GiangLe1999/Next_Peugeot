@@ -17,7 +17,9 @@ export const getAllCatesData = async () => {
 
 export const getAllCarsData = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cars`, {
+      cache: "no-store",
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch data");

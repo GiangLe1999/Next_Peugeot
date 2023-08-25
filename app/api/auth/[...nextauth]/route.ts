@@ -37,7 +37,6 @@ export const authOptions: NextAuthOptions = {
     },
 
     async session({ session }) {
-      //Fetch về data cần thiết để update session
       await dbConnect();
       const user = await User.findOne({ email: session.user?.email });
       if (user)
