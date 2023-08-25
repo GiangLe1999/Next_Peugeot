@@ -13,8 +13,8 @@ const Actions: FC<Props> = (props): JSX.Element => {
         <BtnWithIcon
           icon={BsFillTelephoneFill}
           iconSize={15}
-          content="Hotline: 0975.047.068"
-          href="tel:0975047068"
+          content="Hotline: 0377.750.199"
+          href="tel:0377750199"
         />
 
         <BtnWithIcon

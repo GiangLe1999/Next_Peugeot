@@ -16,14 +16,15 @@ interface Props {
 const CarCard: FC<Props> = ({ car }): JSX.Element => {
   return (
     <div className="shadow-md rounded-lg border border-[#eee] p-4 pb-10 hover:shadow-lg transition duration-500">
-      <div
-      // href={"/sanpham/" + car.slug}
-      >
-        <div className="relative aspect-8/5 mb-3 w-[80%] mx-auto">
+      <div>
+        <Link
+          href={"/sanpham/" + car.slug}
+          className="block relative aspect-8/5 mb-3 w-[80%] mx-auto"
+        >
           <NextImage src={car.images[0]} alt={car.name} />
-        </div>
+        </Link>
 
-        <div className="text-center pb-6">
+        <Link href={"/sanpham/" + car.slug} className="text-center pb-6 block">
           <h3 className="text-2xl mb-2">{car.name}</h3>
           <p className="text-xl font-bold">
             Giá từ:{" "}
@@ -31,7 +32,7 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
               {formatPrice(car.price)}
             </span>
           </p>
-        </div>
+        </Link>
 
         <div className="grid grid-cols-2 max-[390px]:grid-cols-1 gap-6 items-center w-[70%] max-[1000px]:w-[100%] m-auto">
           <Link href={"/sanpham/" + car.slug} className={buttonClasses}>
