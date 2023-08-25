@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Văn Giàu Peugeot",
   description:
     "Cập nhật bảng giá xe Peugeot mới nhất gồm các dòng xe ô tô 4 bánh: 2008, 3008, 5008, Traveller cùng các khuyến mãi đi kèm. Cùng tham khảo trước khi mua xe.",
+  verification: {
+    google: "57HxdihzfhLclLFarH4JaUjH3lU66I7kRnpvGi9p2uQ",
+  },
 };
 
 export default function RootLayout({
