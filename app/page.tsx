@@ -6,6 +6,17 @@ import News from "@/components/home/News";
 
 import { NextPage } from "next";
 
+export const generateMetadata = () => {
+  return {
+    title: "Ô tô Peugeot Văn Giàu",
+    description:
+      "Cập nhật bảng giá xe Peugeot mới nhất gồm các dòng xe ô tô 4 bánh: 2008, 3008, 5008, Traveller cùng các khuyến mãi đi kèm. Cùng tham khảo trước khi mua xe.",
+    alternates: {
+      canonical: process.env.NEXT_PUBLIC_BASE_URL,
+    },
+  };
+};
+
 interface Props {}
 
 const page: NextPage<Props> = async () => {

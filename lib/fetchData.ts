@@ -1,4 +1,5 @@
 import { CarType } from "@/types";
+import { cache } from "react";
 
 export const getAllCatesData = async () => {
   try {
@@ -28,7 +29,7 @@ export const getAllCarsData = async () => {
   }
 };
 
-export const getCarData = async (carSlug: string) => {
+export const getCarData = cache(async (carSlug: string) => {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/car?slug=${carSlug}`,
@@ -43,7 +44,7 @@ export const getCarData = async (carSlug: string) => {
   } catch (error) {
     console.log(error);
   }
-};
+});
 
 export const getCarPostData = async (slug: string) => {
   try {

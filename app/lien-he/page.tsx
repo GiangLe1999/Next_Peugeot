@@ -5,6 +5,15 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaEarthAfrica } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
+export const generateMetadata = () => {
+  return {
+    title: "Liên hệ với Văn Giàu Peugeot",
+    description:
+      "Liên hệ ngay với Văn Giàu Peogeot để đặt lịch lái thử hoặc nhận báo giá mới nhất cho các dòng xe Peugeot.",
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/lien-he`,
+  };
+};
+
 interface Props {}
 
 const titleClasses = "font-bold text-xl pb-3 uppercase";
