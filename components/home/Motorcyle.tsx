@@ -10,7 +10,7 @@ const Motorcyle: FC<Props> = (props): JSX.Element => {
   return (
     <div className="container pb-8">
       <SectionTitle text="MẪU XE MÁY PEUGEOT MOTOCYCLES" />
-      <div className="grid grid-cols-2 gap-x-5">
+      <div className="grid grid-cols-2 gap-5 max-[842px]:grid-cols-1 max-[842px]:gap-y-10">
         <div className="w-full aspect-6/4 relative px-5 pb-8">
           <NextImage
             src="/home/django/uu-dai-django-125-abs.jpg"

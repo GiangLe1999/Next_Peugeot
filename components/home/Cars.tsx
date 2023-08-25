@@ -13,7 +13,7 @@ const Cars: FC<Props> = async () => {
     <div className="container py-12">
       <SectionTitle text="MẪU Ô TÔ PEUGEOT" />
 
-      <div className="container grid grid-cols-2 gap-10">
+      <div className="container grid grid-cols-2 max-[776px]:grid-cols-1 gap-10">
         {cars?.length > 0 &&
           cars?.map((car) => {
             if (car.name === "Peugeot Django") {

@@ -9,8 +9,8 @@ interface Props {}
 const Footer: FC<Props> = (props): JSX.Element => {
   return (
     <footer className="bg-primary">
-      <div className="container flex gap-x-10 pt-14 pb-5">
-        <div className="relative w-1/2 aspect-video">
+      <div className="container grid grid-cols-2 max-[790px]:grid-cols-1 gap-10 pt-14 pb-5">
+        <div className="relative w-full f-full max-[790px]:aspect-video">
           <NextImage
             src="/layout/peugeot-footer.jpg"
             alt="Footer Peugeot"
@@ -21,21 +21,21 @@ const Footer: FC<Props> = (props): JSX.Element => {
         <FooterForm />
       </div>
 
-      <div className="container flex text-white py-20">
-        <div className="w-[46%]">
+      <div className="container flex flex-wrap max-[811px]:gap-5 text-white py-20 ">
+        <div className="w-[46%] max-[1081px]:w-[60%] max-[811px]:w-full">
           <h4 className="footerTitle">Peugeot Văn Giàu</h4>
           <p>Peugeot Cam Ranh - Đại Lý Chính Hãng Peugeot Việt Nam.</p>
           <p>Showroom: 1580 Hùng Vương, Cam Phú, Cam Ranh, Khánh Hòa</p>
         </div>
 
-        <div className="w-[27%]">
+        <div className="w-[27%] max-[1081px]:w-[40%] max-[811px]:mt-6 max-[811px]:w-full">
           <h4 className="footerTitle">Hỗ trợ khách hàng</h4>
           <p>Hotline: 0377.750.199</p>
           <p>Email:</p>
           <p>phamgiau190@gmail.com</p>
         </div>
 
-        <div className="w-[27%]">
+        <div className="w-[27%] max-[1081px]:w-[100%] max-[1081px]:mt-6">
           <h4 className="footerTitle">Follow</h4>
           <li>
             <Link href="">TRẢI NGHIỆM KHÁCH HÀNG</Link>

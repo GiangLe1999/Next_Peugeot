@@ -17,9 +17,11 @@ const benefits = [
 const CarGeneralInfo: FC<Props> = ({ car }): JSX.Element => {
   return (
     <div>
-      <div className="flex justify-between items-center font-bold mb-4">
+      <div className="flex justify-between flex-wrap gap-2 items-center font-bold mb-4">
         <h1 className="text-2xl">{car?.name}</h1>
-        <p className="text-xl">{formatPrice(car?.price as number)}</p>
+        <p className="text-xl text-red-700">
+          {formatPrice(car?.price as number)}
+        </p>
       </div>
       <div>
         <h3 className="font-bold text-lg mb-2">Giá xe {car?.name}</h3>

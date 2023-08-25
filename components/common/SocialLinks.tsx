@@ -9,7 +9,7 @@ interface Props {
 
 const SocialLinks: FC<Props> = ({ light }): JSX.Element => {
   return (
-    <div className="flex gap-x-3">
+    <div className="flex flex-wrap gap-x-3 gap-y-2">
       <div
         className={`socialIcon hover:bg-[#3A589C] ${
           light && "bg-[#3A589C] lightSocialIcon"

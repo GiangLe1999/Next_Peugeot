@@ -27,13 +27,13 @@ const CarCard: FC<Props> = ({ car }): JSX.Element => {
           <h3 className="text-2xl mb-2">{car.name}</h3>
           <p className="text-xl font-bold">
             Giá từ:{" "}
-            <span className="text-3xl text-red-700">
+            <span className="text-3xl max-[359px]:text-xl text-red-700">
               {formatPrice(car.price)}
             </span>
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 items-center w-[70%] m-auto">
+        <div className="grid grid-cols-2 max-[390px]:grid-cols-1 gap-6 items-center w-[70%] max-[1000px]:w-[100%] m-auto">
           <Link href={"/sanpham/" + car.slug} className={buttonClasses}>
             <FaMagnifyingGlassChart /> Xem thông số
           </Link>

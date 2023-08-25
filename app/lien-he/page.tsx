@@ -33,13 +33,13 @@ const page: NextPage<Props> = () => {
     <div className="container py-9">
       <SectionTitle text="LIÊN HỆ VỚI CHÚNG TÔI" />
 
-      <div className="grid grid-cols-2 gap-9">
+      <div className="grid grid-cols-2 gap-9 max-[846px]:grid-cols-1">
         <div className="space-y-11">
           <div>
             <h1 className={titleClasses}>Peugeot Văn Giàu</h1>
             <ul>
               {infos.map((info, index) => (
-                <li key={index} className="flex items-center gap-1 py-2">
+                <li key={index} className="flex items-center gap-2 py-2">
                   <info.icon />
                   {info.content}
                 </li>
@@ -76,7 +76,7 @@ const page: NextPage<Props> = () => {
         <div className="">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.645086077218!2d109.16962397416219!3d11.929769388297995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170ed44e903824f%3A0x32e12ba9e1dc212c!2zMTU4MCBIw7luZyBWxrDGoW5nLCBDYW0gUGjDuiwgQ2FtIFJhbmgsIEtow6FuaCBIw7JhIDY1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1692874748544!5m2!1svi!2s"
-            className="w-full h-full"
+            className="w-full h-full max-[846px]:aspect-video"
             loading="lazy"
           ></iframe>
         </div>

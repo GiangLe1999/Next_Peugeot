@@ -21,7 +21,7 @@ const page: NextPage<Props> = async ({ params }) => {
 
   return (
     <div className="container">
-      <div className="grid grid-cols-2 gap-8 pt-8 pb-3">
+      <div className="grid grid-cols-2 gap-8 pt-8 pb-3 max-[887px]:grid-cols-1">
         <div>
           <CarImageGallery images={car?.images || []} />
         </div>

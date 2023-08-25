@@ -9,7 +9,7 @@ interface Props {}
 const Actions: FC<Props> = (props): JSX.Element => {
   return (
     <div className="mt-6">
-      <div className="flex items-center gap-x-3 mb-4">
+      <div className="flex flex-wrap items-center gap-3 mb-4">
         <BtnWithIcon
           icon={BsFillTelephoneFill}
           iconSize={15}
@@ -25,7 +25,7 @@ const Actions: FC<Props> = (props): JSX.Element => {
         />
       </div>
 
-      <div className="flex items-center gap-x-2">
+      <div className="flex flex-wrap items-center gap-2">
         Hoặc liên hệ thông qua: <SocialLinks light />
       </div>
     </div>

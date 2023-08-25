@@ -23,7 +23,7 @@ const HeaderItems: FC<Props> = (props): JSX.Element => {
   return (
     <ul className="text-white flex items-center gap-2">
       {role === "admin" && (
-        <li className="hover:text-white group">
+        <li className="hover:text-white group max-[1161px]:hidden">
           <Link
             href={`/admin`}
             className={`${navItemClasses} ${
@@ -37,7 +37,7 @@ const HeaderItems: FC<Props> = (props): JSX.Element => {
         </li>
       )}
       {headerItems.map((item, index) => (
-        <li key={index} className="hover:text-white group">
+        <li key={index} className="hover:text-white group max-[1161px]:hidden">
           <Link
             href={`/${item.link}`}
             className={`${navItemClasses} ${
@@ -53,10 +53,7 @@ const HeaderItems: FC<Props> = (props): JSX.Element => {
         onClick={() => setShow(true)}
         ref={innerRef}
       >
-        <ImSearch
-          size={16}
-          className="text-[#fffc] group-hover:text-white transition"
-        />
+        <ImSearch className="text-[#fffc] group-hover:text-white transition w-4 h-4 max-[1161px]:w-6 max-[1161px]:h-6" />
 
         <SearchBar showSearch={show} />
       </div>
