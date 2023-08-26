@@ -12,7 +12,7 @@ const chakra = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Văn Giàu Peugeot",
+  title: "Ô tô Peugeot Khánh Hòa",
   description:
     "Cập nhật bảng giá xe Peugeot mới nhất gồm các dòng xe ô tô 4 bánh: 2008, 3008, 5008, Traveller cùng các khuyến mãi đi kèm. Cùng tham khảo trước khi mua xe.",
   verification: {

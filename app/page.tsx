@@ -8,7 +8,7 @@ import { NextPage } from "next";
 
 export const generateMetadata = () => {
   return {
-    title: "Ô tô Peugeot Văn Giàu",
+    title: "Peugeot Khánh Hòa | Peugeot 2008, Peugeot 3008, Peugeot 5008",
     description:
       "Cập nhật bảng giá xe Peugeot mới nhất gồm các dòng xe ô tô 4 bánh: 2008, 3008, 5008, Traveller cùng các khuyến mãi đi kèm. Cùng tham khảo trước khi mua xe.",
     alternates: {
